@@ -9,6 +9,15 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-       <h1> This is the About title </h1>
+       <h1> This is the {{ about_page }} </h1>
+
+       {% if is_admin %}
+            <p> Your are admin </p>
+        {% else %}
+            <p> You are a normal user </p>
+        {% endif %}
+
+
+        <a href="{% url 'home' %}">Home page </a>
     </body>
 </html>
